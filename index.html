@@ -3,54 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pharmaceutical Company</title>
+    <title>Hospital Bill Estimation</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>PharmaCare</h1>
-        <nav>
-            <ul>
-                <li><a href="#home" target="_blank">Home</a></li>
-                <li><a href="#shop">Shop Drugs</a></li>
-                <li><a href="#mall">Mall</a></li>
-                <li><a href="#invoices">Invoices</a></li>
-                <li><a href="#pharmacists">Pharmacists</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section id="home">
-        <h2>Welcome to PharmaCare</h2>
-        <p>Your trusted online pharmacy and health care provider.</p>
-    </section>
-
-    <section id="shop">
-        <h2>Shop Drugs</h2>
-        <p>Browse and buy drugs online.</p>
-        <!-- Add product listings here -->
-    </section>
-
-    <section id="mall">
-        <h2>Mall</h2>
-        <p>Explore our health and wellness mall.</p>
-        <!-- Add mall items here -->
-    </section>
-
-    <section id="invoices">
-        <h2>Invoices</h2>
-        <p>Manage your invoices and billing information.</p>
-        <!-- Add invoice management features here -->
-    </section>
-
-    <section id="pharmacists">
-        <h2>Consult with Pharmacists</h2>
-        <p>Get professional advice from our certified pharmacists.</p>
-        <!-- Add pharmacist consultation features here -->
-    </section>
-
-    <footer>
-        <p>&copy; 2024 PharmaCare. All rights reserved.</p>
-    </footer>
+    <div class="container">
+        <h1>Hospital Bill Estimation</h1>
+        <form id="billForm">
+            <div class="form-group">
+                <label for="patientName">Patient Name:</label>
+                <input type="text" id="patientName" name="patientName" required>
+            </div>
+            <div class="form-group">
+                <label for="patientAge">Patient Age:</label>
+                <input type="number" id="patientAge" name="patientAge" required>
+            </div>
+            <div class="form-group">
+                <label for="patientGender">Patient Gender:</label>
+                <select id="patientGender" name="patientGender" required>
+                    <option value="">Select Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="serviceType">Service Type:</label>
+                <select id="serviceType" name="serviceType" required>
+                    <option value="">Select Service Type</option>
+                    <option value="inpatient">Inpatient</option>
+                    <option value="outpatient">Outpatient</option>
+                    <option value="emergency">Emergency</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="roomType">Room Type:</label>
+                <select id="roomType" name="roomType" required>
+                    <option value="">Select Room Type</option>
+                    <option value="general">General Ward</option>
+                    <option value="semiPrivate">Semi-Private Room</option>
+                    <option value="private">Private Room</option>
+                    <option value="icu">ICU</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="duration">Duration of Stay (Days):</label>
+                <input type="number" id="duration" name="duration" min="1" required>
+            </div>
+            <div class="form-group">
+                <label for="procedures">Procedures (if any):</label>
+                <textarea id="procedures" name="procedures" rows="4"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="medications">Medications (if any):</label>
+                <textarea id="medications" name="medications" rows="4"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="insurance">Insurance Provider:</label>
+                <input type="text" id="insurance" name="insurance">
+            </div>
+            <div class="form-group">
+                <label for="insuranceCoverage">Insurance Coverage (%):</label>
+                <input type="number" id="insuranceCoverage" name="insuranceCoverage" min="0" max="100" step="1">
+            </div>
+            <button type="submit">Estimate Bill</button>
+        </form>
+        <div id="billEstimation">
+            <!-- Estimated bill details will be displayed here -->
+        </div>
+    </div>
 </body>
 </html>

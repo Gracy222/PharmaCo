@@ -4,51 +4,61 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #fd9e9e;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff3f3;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ffeaea;
+    border-radius: 4px;
     box-sizing: border-box;
 }
 
-header {
-    background-color: #007BFF;
-    color: white;
-    padding: 1rem 0;
-    text-align: center;
-}
-
-header h1 {
-    margin: 0;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin: 0;
-}
-
-nav ul li {
-    display: inline;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
-}
-
-section {
-    padding: 2rem;
-    border-bottom: 1px solid #ddd;
-}
-
-footer {
-    background-color: #f1f1f1;
-    text-align: center;
-    padding: 1rem 0;
-    position: relative;
+button {
+    display: block;
     width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fce3e3;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #f5238c;
+}
+
+#billEstimation {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
 }
